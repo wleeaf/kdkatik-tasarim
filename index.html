@@ -7,7 +7,7 @@
 <title>KD Katık Döner · Arayın Getirelim</title>
 <meta name="description" content="KD Katık Döner — Antakya, Dönen Lezzet. Trabzon Meydan, Yomra, Araklı, Söğütlü, Of ve Rize şubeleri. Gerçek sos, efsane tat.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --brown:#4a1a12; --brown-deep:#2e0f0a; --red:#d7262b; --yellow:#ffd21f;
@@ -78,13 +78,15 @@ section { padding:56px 0; }
 .cat { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:18px 18px 8px; }
 .cat h3 { font-size:1.5rem; color:var(--yellow); margin:0 0 8px; }
 .cat ul { list-style:none; margin:0; padding:0; }
-.cat li { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; border-top:1px dashed rgba(255,255,255,.15); }
+.cat li { display:flex; align-items:center; gap:12px; padding:10px 0; border-top:1px dashed rgba(255,255,255,.15); }
 .cat li:first-child { border-top:0; }
+.cat li img { width:88px; height:66px; object-fit:cover; border-radius:10px; flex:none; }
+.cat li div { flex:1; min-width:0; }
 .cat b { font-weight:700; }
 .cat small { display:block; color:#d9c3b8; font-size:.85rem; }
 .cat i { font-style:normal; font-family:Anton,sans-serif; color:var(--yellow); font-size:1.15rem; white-space:nowrap; }
 .menu-cta { text-align:center; margin-top:24px; }
-@media (max-width:700px) { .menu-grid { grid-template-columns:1fr; } }
+@media (max-width:700px) { .menu-grid { grid-template-columns:1fr; } .menu { padding:26px 14px; } .cat { padding:16px 14px 6px; } .cat li img { width:68px; height:52px; } }
 
 /* HQ */
 .hq { display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:stretch; }
@@ -110,7 +112,22 @@ footer b { color:#fff; }
 
 <header class="hero">
   <div class="wrap">
-    <img class="logo" src="img/logo.webp" alt="KD Antakya Dönen Lezzet logosu" width="118" height="118">
+    <svg class="logo" viewBox="0 0 400 400" width="118" height="118" role="img" aria-label="KD Antakya Dönen Lezzet logosu">
+      <defs><path id="kd-bottom" d="M 62 200 A 138 138 0 0 0 338 200"/></defs>
+      <circle cx="200" cy="200" r="196" fill="#fff"/>
+      <circle cx="200" cy="200" r="188" fill="#d7262b"/>
+      <circle cx="200" cy="200" r="132" fill="#fff"/>
+      <circle cx="200" cy="200" r="138" fill="none" stroke="#fff" stroke-width="3"/>
+      <g fill="#fff"><circle cx="200" cy="38" r="5"/><circle cx="172" cy="40" r="3.5"/><circle cx="228" cy="40" r="3.5"/></g>
+      <text font-family="'Alfa Slab One',Georgia,serif" font-size="40" fill="#fff" letter-spacing="2"><textPath href="#kd-bottom" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">• Dönen Lezzet •</textPath></text>
+      <g fill="#111" transform="translate(20 0) skewX(-7)">
+        <polygon points="96,128 136,128 136,240 96,240"/>
+        <polygon points="143,128 180,128 153,182 199,240 143,240"/>
+        <polygon points="188,128 226,128 240,240 208,240"/>
+        <path d="M 233 128 H 254 A 56 56 0 0 1 254 240 H 247 Z"/>
+      </g>
+      <text x="200" y="285" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="34" letter-spacing="7" fill="#111">ANTAKYA</text>
+    </svg>
     <h1 class="wordmark display">Katık<small>döner</small></h1>
     <p class="tag display">Gerçek sos, <span>efsane tat.</span></p>
     <p class="sub">Antakya · Dönen Lezzet — Trabzon ve Rize'de 6 şube.</p>
@@ -188,42 +205,42 @@ footer b { color:#fff; }
     <div class="menu" id="menu">
       <div class="menu-head">
         <h2 class="display">Menü</h2>
-        <span class="sample">Örnek menüdür — ürünler ve fiyatlar temsilidir</span>
+        <span class="sample">Örnek menüdür — ürünler, fiyatlar ve görseller temsilidir</span>
       </div>
       <div class="menu-grid">
         <div class="cat">
           <h3 class="display">Dürümler</h3>
           <ul>
-            <li><div><b>Tavuk Döner Dürüm</b><small>Lavaşta tavuk döner, özel sos, turşu</small></div><i>190 TL</i></li>
-            <li><div><b>Katık Dürüm</b><small>Antakya usulü, bol soslu, ince lavaş</small></div><i>210 TL</i></li>
-            <li><div><b>Büyük Dürüm</b><small>1,5 porsiyon döner</small></div><i>260 TL</i></li>
-            <li><div><b>Kaşarlı Dürüm</b><small>Eritilmiş kaşar ile</small></div><i>220 TL</i></li>
+            <li><img src="img/menu/tavuk-durum.webp" alt="Tavuk Döner Dürüm" loading="lazy" width="88" height="66"><div><b>Tavuk Döner Dürüm</b><small>Lavaşta tavuk döner, özel sos, turşu</small></div><i>190 TL</i></li>
+            <li><img src="img/menu/katik-durum.webp" alt="Katık Dürüm" loading="lazy" width="88" height="66"><div><b>Katık Dürüm</b><small>Antakya usulü, bol soslu, ince lavaş</small></div><i>210 TL</i></li>
+            <li><img src="img/menu/buyuk-durum.webp" alt="Büyük Dürüm" loading="lazy" width="88" height="66"><div><b>Büyük Dürüm</b><small>1,5 porsiyon döner</small></div><i>260 TL</i></li>
+            <li><img src="img/menu/kasarli-durum.webp" alt="Kaşarlı Dürüm" loading="lazy" width="88" height="66"><div><b>Kaşarlı Dürüm</b><small>Eritilmiş kaşar ile</small></div><i>220 TL</i></li>
           </ul>
         </div>
         <div class="cat">
           <h3 class="display">Ekmek Arası</h3>
           <ul>
-            <li><div><b>Yarım Ekmek Döner</b><small>Tavuk döner, sos, turşu</small></div><i>170 TL</i></li>
-            <li><div><b>Tam Ekmek Döner</b><small>Doyurucu boy</small></div><i>240 TL</i></li>
-            <li><div><b>Tombik Döner</b><small>Tombik ekmekte, bol soslu</small></div><i>200 TL</i></li>
+            <li><img src="img/menu/yarim-ekmek.webp" alt="Yarım Ekmek Döner" loading="lazy" width="88" height="66"><div><b>Yarım Ekmek Döner</b><small>Tavuk döner, sos, turşu</small></div><i>170 TL</i></li>
+            <li><img src="img/menu/tam-ekmek.webp" alt="Tam Ekmek Döner" loading="lazy" width="88" height="66"><div><b>Tam Ekmek Döner</b><small>Doyurucu boy</small></div><i>240 TL</i></li>
+            <li><img src="img/menu/tombik.webp" alt="Tombik Döner" loading="lazy" width="88" height="66"><div><b>Tombik Döner</b><small>Tombik ekmekte, bol soslu</small></div><i>200 TL</i></li>
           </ul>
         </div>
         <div class="cat">
           <h3 class="display">Porsiyon</h3>
           <ul>
-            <li><div><b>Porsiyon Döner</b><small>Lavaş, patates, turşu ile</small></div><i>280 TL</i></li>
-            <li><div><b>Pilav Üstü Döner</b><small>Tereyağlı pirinç pilavı üstünde</small></div><i>300 TL</i></li>
-            <li><div><b>İskender Usulü</b><small>Yoğurt, tereyağlı sos</small></div><i>340 TL</i></li>
+            <li><img src="img/menu/porsiyon.webp" alt="Porsiyon Döner" loading="lazy" width="88" height="66"><div><b>Porsiyon Döner</b><small>Lavaş, patates, turşu ile</small></div><i>280 TL</i></li>
+            <li><img src="img/menu/pilav-ustu.webp" alt="Pilav Üstü Döner" loading="lazy" width="88" height="66"><div><b>Pilav Üstü Döner</b><small>Tereyağlı pirinç pilavı üstünde</small></div><i>300 TL</i></li>
+            <li><img src="img/menu/iskender.webp" alt="İskender Usulü" loading="lazy" width="88" height="66"><div><b>İskender Usulü</b><small>Yoğurt, tereyağlı sos</small></div><i>340 TL</i></li>
           </ul>
         </div>
         <div class="cat">
           <h3 class="display">Menüler &amp; İçecekler</h3>
           <ul>
-            <li><div><b>Dürüm Menü</b><small>Tavuk dürüm + patates + ayran</small></div><i>260 TL</i></li>
-            <li><div><b>Patates Kızartması</b><small>Porsiyon</small></div><i>90 TL</i></li>
-            <li><div><b>Ayran</b></div><i>35 TL</i></li>
-            <li><div><b>Şalgam</b></div><i>40 TL</i></li>
-            <li><div><b>Kutu İçecek</b></div><i>50 TL</i></li>
+            <li><img src="img/menu/durum-menu.webp" alt="Dürüm Menü" loading="lazy" width="88" height="66"><div><b>Dürüm Menü</b><small>Tavuk dürüm + patates + ayran</small></div><i>260 TL</i></li>
+            <li><img src="img/menu/patates.webp" alt="Patates Kızartması" loading="lazy" width="88" height="66"><div><b>Patates Kızartması</b><small>Porsiyon</small></div><i>90 TL</i></li>
+            <li><img src="img/menu/ayran.webp" alt="Ayran" loading="lazy" width="88" height="66"><div><b>Ayran</b></div><i>35 TL</i></li>
+            <li><img src="img/menu/salgam.webp" alt="Şalgam" loading="lazy" width="88" height="66"><div><b>Şalgam</b></div><i>40 TL</i></li>
+            <li><img src="img/menu/icecek.webp" alt="Kutu İçecek" loading="lazy" width="88" height="66"><div><b>Kutu İçecek</b></div><i>50 TL</i></li>
           </ul>
         </div>
       </div>
