@@ -68,12 +68,23 @@ section { padding:56px 0; }
 @media (max-width:860px) { .branches { grid-template-columns:1fr 1fr; } }
 @media (max-width:560px) { .branches { grid-template-columns:1fr; } }
 
-/* menu placeholder */
-.menu-ph { background:var(--brown-deep); color:#fff; border-radius:22px; padding:34px 26px; text-align:center;
+/* menu */
+.menu { background:var(--brown-deep); color:#fff; border-radius:22px; padding:30px 22px;
   background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0 12px, transparent 12px 24px); }
-.menu-ph h2 { font-size:clamp(2rem,6vw,2.8rem); margin:0 0 10px; color:var(--yellow); }
-.menu-ph p { margin:0 auto; max-width:34em; opacity:.88; }
-.menu-ph .ig { display:inline-block; margin-top:20px; background:#fff; color:var(--brown-deep); font-weight:700; text-decoration:none; padding:12px 20px; border-radius:12px; }
+.menu-head { text-align:center; margin-bottom:22px; }
+.menu-head h2 { font-size:clamp(2.4rem,7vw,3.2rem); margin:0 0 10px; color:var(--yellow); }
+.sample { display:inline-block; font-size:.78rem; font-weight:600; background:rgba(255,255,255,.1); border:1px dashed rgba(255,255,255,.35); padding:4px 12px; border-radius:99px; }
+.menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.cat { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:18px 18px 8px; }
+.cat h3 { font-size:1.5rem; color:var(--yellow); margin:0 0 8px; }
+.cat ul { list-style:none; margin:0; padding:0; }
+.cat li { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; border-top:1px dashed rgba(255,255,255,.15); }
+.cat li:first-child { border-top:0; }
+.cat b { font-weight:700; }
+.cat small { display:block; color:#d9c3b8; font-size:.85rem; }
+.cat i { font-style:normal; font-family:Anton,sans-serif; color:var(--yellow); font-size:1.15rem; white-space:nowrap; }
+.menu-cta { text-align:center; margin-top:24px; }
+@media (max-width:700px) { .menu-grid { grid-template-columns:1fr; } }
 
 /* HQ */
 .hq { display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:stretch; }
@@ -174,10 +185,51 @@ footer b { color:#fff; }
 
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="menu-ph">
-      <h2 class="display">Menü çok yakında</h2>
-      <p>Menümüz ve fiyatlarımız burada yer alacak. Güncel lezzetlerimiz ve kampanyalarımız için Instagram'da bizi takip edin.</p>
-      <a class="ig" href="https://www.instagram.com/kdkatikdoner/" target="_blank" rel="noopener">@kdkatikdoner</a>
+    <div class="menu" id="menu">
+      <div class="menu-head">
+        <h2 class="display">Menü</h2>
+        <span class="sample">Örnek menüdür — ürünler ve fiyatlar temsilidir</span>
+      </div>
+      <div class="menu-grid">
+        <div class="cat">
+          <h3 class="display">Dürümler</h3>
+          <ul>
+            <li><div><b>Tavuk Döner Dürüm</b><small>Lavaşta tavuk döner, özel sos, turşu</small></div><i>190 TL</i></li>
+            <li><div><b>Katık Dürüm</b><small>Antakya usulü, bol soslu, ince lavaş</small></div><i>210 TL</i></li>
+            <li><div><b>Büyük Dürüm</b><small>1,5 porsiyon döner</small></div><i>260 TL</i></li>
+            <li><div><b>Kaşarlı Dürüm</b><small>Eritilmiş kaşar ile</small></div><i>220 TL</i></li>
+          </ul>
+        </div>
+        <div class="cat">
+          <h3 class="display">Ekmek Arası</h3>
+          <ul>
+            <li><div><b>Yarım Ekmek Döner</b><small>Tavuk döner, sos, turşu</small></div><i>170 TL</i></li>
+            <li><div><b>Tam Ekmek Döner</b><small>Doyurucu boy</small></div><i>240 TL</i></li>
+            <li><div><b>Tombik Döner</b><small>Tombik ekmekte, bol soslu</small></div><i>200 TL</i></li>
+          </ul>
+        </div>
+        <div class="cat">
+          <h3 class="display">Porsiyon</h3>
+          <ul>
+            <li><div><b>Porsiyon Döner</b><small>Lavaş, patates, turşu ile</small></div><i>280 TL</i></li>
+            <li><div><b>Pilav Üstü Döner</b><small>Tereyağlı pirinç pilavı üstünde</small></div><i>300 TL</i></li>
+            <li><div><b>İskender Usulü</b><small>Yoğurt, tereyağlı sos</small></div><i>340 TL</i></li>
+          </ul>
+        </div>
+        <div class="cat">
+          <h3 class="display">Menüler &amp; İçecekler</h3>
+          <ul>
+            <li><div><b>Dürüm Menü</b><small>Tavuk dürüm + patates + ayran</small></div><i>260 TL</i></li>
+            <li><div><b>Patates Kızartması</b><small>Porsiyon</small></div><i>90 TL</i></li>
+            <li><div><b>Ayran</b></div><i>35 TL</i></li>
+            <li><div><b>Şalgam</b></div><i>40 TL</i></li>
+            <li><div><b>Kutu İçecek</b></div><i>50 TL</i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-cta">
+        <a class="call-big" href="tel:+904623223131"><span class="lbl">Sipariş<br>için arayın</span><span class="num">0462 322 31 31</span></a>
+      </div>
     </div>
   </div>
 </section>
