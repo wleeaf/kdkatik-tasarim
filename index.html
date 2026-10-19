@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>KD Katık Döner · Arayın Getirelim</title>
+<meta name="description" content="KD Katık Döner — Antakya, Dönen Lezzet. Trabzon Meydan, Yomra, Araklı, Söğütlü, Of ve Rize şubeleri. Gerçek sos, efsane tat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brown:#4a1a12; --brown-deep:#2e0f0a; --red:#d7262b; --yellow:#ffd21f;
+  --cream:#fff7ea; --ink:#22140f; --muted:#6e5a52; --line:#eedfcd;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:Inter,system-ui,sans-serif; color:var(--ink); background:var(--cream); line-height:1.55; padding-bottom:76px; }
+img { display:block; max-width:100%; }
+a { color:inherit; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
+.display { font-family:Anton,Impact,sans-serif; font-weight:400; letter-spacing:.01em; line-height:1; text-transform:uppercase; }
+
+.notice { background:#111; color:#fff; text-align:center; font-size:.82rem; font-weight:600; padding:8px 16px; }
+
+/* hero with the flyer's sunburst */
+.hero {
+  color:#fff; text-align:center; position:relative; overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,190,120,.28), transparent 55%),
+    repeating-conic-gradient(from 0deg at 50% 30%, var(--brown) 0deg 7deg, #5c2419 7deg 14deg);
+}
+.hero .wrap { padding-top:36px; padding-bottom:44px; }
+.hero .logo { width:118px; height:118px; margin:0 auto 14px; filter:drop-shadow(0 8px 18px rgba(0,0,0,.45)); }
+.wordmark { font-size:clamp(4rem,17vw,7.5rem); margin:0; text-shadow:0 4px 0 rgba(0,0,0,.25); }
+.wordmark small { display:block; font-family:Inter,sans-serif; font-style:italic; font-weight:700; text-transform:none; font-size:.32em; letter-spacing:.02em; margin-top:-.1em; }
+.tag { font-size:clamp(1.6rem,6vw,2.4rem); margin:18px 0 4px; }
+.tag span { color:var(--yellow); }
+.sub { opacity:.9; margin:0 0 26px; font-weight:500; }
+.call-big {
+  display:inline-flex; align-items:center; gap:12px; background:var(--yellow); color:var(--brown-deep);
+  text-decoration:none; border-radius:16px; padding:14px 22px; box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+.call-big .lbl { font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; text-align:left; line-height:1.2; }
+.call-big .num { font-family:Anton,sans-serif; font-size:2rem; letter-spacing:.02em; }
+.hero .alt { margin-top:14px; font-size:.95rem; opacity:.9; }
+.hero .alt a { color:var(--yellow); font-weight:600; }
+
+/* branches */
+section { padding:56px 0; }
+.head { text-align:center; margin-bottom:28px; }
+.head .eyebrow { color:var(--red); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; }
+.head h2 { font-size:clamp(2.2rem,7vw,3.2rem); margin:8px 0 6px; color:var(--brown-deep); }
+.head p { color:var(--muted); margin:0; }
+.branches { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.branch { background:#fff; border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:0 2px 0 var(--line); }
+.branch.main { border:2px solid var(--red); }
+.branch h3 { margin:0; font-size:1.7rem; color:var(--brown-deep); }
+.branch .city { color:var(--muted); font-size:.85rem; margin:2px 0 14px; display:flex; gap:8px; align-items:center; }
+.badge { background:var(--red); color:#fff; font-size:.7rem; font-weight:700; padding:2px 8px; border-radius:99px; letter-spacing:.04em; }
+.phones { display:grid; gap:8px; }
+.phone {
+  display:flex; justify-content:space-between; align-items:center; text-decoration:none;
+  background:var(--cream); border-radius:12px; padding:11px 14px; font-weight:700; color:var(--brown-deep);
+}
+.phone::after { content:"Ara"; background:var(--brown); color:#fff; font-size:.78rem; padding:5px 12px; border-radius:99px; }
+.phone:hover { background:#ffefcc; }
+@media (max-width:860px) { .branches { grid-template-columns:1fr 1fr; } }
+@media (max-width:560px) { .branches { grid-template-columns:1fr; } }
+
+/* menu placeholder */
+.menu-ph { background:var(--brown-deep); color:#fff; border-radius:22px; padding:34px 26px; text-align:center;
+  background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0 12px, transparent 12px 24px); }
+.menu-ph h2 { font-size:clamp(2rem,6vw,2.8rem); margin:0 0 10px; color:var(--yellow); }
+.menu-ph p { margin:0 auto; max-width:34em; opacity:.88; }
+.menu-ph .ig { display:inline-block; margin-top:20px; background:#fff; color:var(--brown-deep); font-weight:700; text-decoration:none; padding:12px 20px; border-radius:12px; }
+
+/* HQ */
+.hq { display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:stretch; }
+.hq .card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:26px; }
+.hq h3 { font-size:2rem; margin:0 0 10px; color:var(--brown-deep); }
+.hq p { margin:0 0 6px; color:var(--muted); }
+.map { width:100%; min-height:300px; height:100%; border:0; border-radius:18px; }
+@media (max-width:760px) { .hq { grid-template-columns:1fr; } }
+
+footer { background:var(--brown-deep); color:#d9c3b8; padding:26px 0; font-size:.88rem; text-align:center; }
+footer b { color:#fff; }
+
+/* sticky call bar for phones */
+.bar { position:fixed; left:0; right:0; bottom:0; z-index:20; background:rgba(46,15,10,.97); padding:10px 16px calc(10px + env(safe-area-inset-bottom)); display:flex; gap:10px; }
+.bar a { flex:1; text-align:center; text-decoration:none; font-weight:700; border-radius:12px; padding:13px 10px; }
+.bar .y { background:var(--yellow); color:var(--brown-deep); }
+.bar .w { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.5); }
+@media (min-width:900px) { .bar { left:auto; right:20px; bottom:20px; border-radius:16px; width:380px; } body { padding-bottom:0; } }
+</style>
+</head>
+<body>
+<div class="notice">Tasarım önerisidir — KD Katık Döner'in resmi web sitesi değildir.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="img/logo.webp" alt="KD Antakya Dönen Lezzet logosu" width="118" height="118">
+    <h1 class="wordmark display">Katık<small>döner</small></h1>
+    <p class="tag display">Gerçek sos, <span>efsane tat.</span></p>
+    <p class="sub">Antakya · Dönen Lezzet — Trabzon ve Rize'de 6 şube.</p>
+    <a class="call-big" href="tel:+904623223131">
+      <span class="lbl">Arayın<br>getirelim</span>
+      <span class="num">0462 322 31 31</span>
+    </a>
+    <p class="alt">Size en yakın şube için <a href="#subeler">şubelerimize bakın ↓</a></p>
+  </div>
+</header>
+
+<section id="subeler">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Şubelerimiz</div>
+      <h2 class="display">En yakın şubeyi arayın</h2>
+      <p>Numaraya dokunun, doğrudan arayın.</p>
+    </div>
+    <div class="branches">
+      <div class="branch main">
+        <h3 class="display">Trabzon Meydan</h3>
+        <div class="city">Ortahisar / Trabzon <span class="badge">MERKEZ</span></div>
+        <div class="phones">
+          <a class="phone" href="tel:+904623223131">0462 322 31 31</a>
+          <a class="phone" href="tel:+904623003131">0462 300 31 31</a>
+          <a class="phone" href="tel:+904623263131">0462 326 31 31</a>
+        </div>
+      </div>
+      <div class="branch">
+        <h3 class="display">Yomra</h3>
+        <div class="city">Trabzon</div>
+        <div class="phones">
+          <a class="phone" href="tel:+904624003131">0462 400 31 31</a>
+          <a class="phone" href="tel:+904623443131">0462 344 31 31</a>
+        </div>
+      </div>
+      <div class="branch">
+        <h3 class="display">Araklı</h3>
+        <div class="city">Trabzon</div>
+        <div class="phones">
+          <a class="phone" href="tel:+904623313131">0462 331 31 31</a>
+          <a class="phone" href="tel:+904628813131">0462 881 31 31</a>
+        </div>
+      </div>
+      <div class="branch">
+        <h3 class="display">Söğütlü</h3>
+        <div class="city">Trabzon</div>
+        <div class="phones">
+          <a class="phone" href="tel:+904626663131">0462 666 31 31</a>
+          <a class="phone" href="tel:+904626660031">0462 666 00 31</a>
+        </div>
+      </div>
+      <div class="branch">
+        <h3 class="display">Of</h3>
+        <div class="city">Trabzon</div>
+        <div class="phones">
+          <a class="phone" href="tel:+904627770505">0462 777 05 05</a>
+          <a class="phone" href="tel:+904627770506">0462 777 05 06</a>
+        </div>
+      </div>
+      <div class="branch">
+        <h3 class="display">Rize</h3>
+        <div class="city">Rize</div>
+        <div class="phones">
+          <a class="phone" href="tel:+904642123131">0464 212 31 31</a>
+          <a class="phone" href="tel:+904642173131">0464 217 31 31</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="menu-ph">
+      <h2 class="display">Menü çok yakında</h2>
+      <p>Menümüz ve fiyatlarımız burada yer alacak. Güncel lezzetlerimiz ve kampanyalarımız için Instagram'da bizi takip edin.</p>
+      <a class="ig" href="https://www.instagram.com/kdkatikdoner/" target="_blank" rel="noopener">@kdkatikdoner</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap hq">
+    <div class="card">
+      <div class="head" style="text-align:left;margin-bottom:12px"><div class="eyebrow">Merkez Şube</div></div>
+      <h3 class="display">Trabzon Meydan</h3>
+      <p>Gazipaşa Mah. Uzun Sok. No:3/B<br>Ortahisar / Trabzon</p>
+      <div class="phones" style="margin-top:16px">
+        <a class="phone" href="tel:+904623223131">0462 322 31 31</a>
+      </div>
+    </div>
+    <iframe class="map" loading="lazy" title="KD Katık Döner Trabzon Meydan konum" src="https://maps.google.com/maps?q=KD%20Kat%C4%B1k%20D%C3%B6ner%20Gazipa%C5%9Fa%20Uzun%20Sokak%20Ortahisar%20Trabzon&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><b>KD Katık Döner</b> · Antakya Dönen Lezzet · Trabzon & Rize</div>
+</footer>
+
+<nav class="bar">
+  <a class="y" href="tel:+904623223131">📞 Hemen Ara</a>
+  <a class="w" href="#subeler">Şubeler</a>
+</nav>
+</body>
+</html>
